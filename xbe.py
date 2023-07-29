@@ -19,10 +19,6 @@ from struct import *
 import array , sys
 import zlib
 from os.path import getsize as ospath_getsize, splitext as ospath_splitext
-from limpp import Get_image as GET_IMAGE
-
-def Get_image(mipmap=0,addr=0,size=None,file=None,process=True,options=None):
-	return GET_IMAGE(mipmap=mipmap,addr=addr,size=size,file=file,process=process,options=options)
 
 
 ################################################################################
@@ -305,19 +301,5 @@ class XBE:
 			return None
 		else:
 			return None
-			
-	def Get_title_image(self):
-		img_section = self.Get_image_info('$$XTIMAGE')
-		if img_section:
-			return Get_image(addr=img_section['raw_addr'],size=img_section['sizeof_raw'],file=self.file)
-		else:
-			return None
-		
-	def Get_save_image(self):
-		img_section = self.Get_image_info('$$XSIMAGE')
-		if img_section:
-			return Get_image(addr=img_section['raw_addr'],size=img_section['sizeof_raw'],file=self.file)
-		else:
-			return None
-		
+
 

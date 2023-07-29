@@ -3,8 +3,7 @@
 	Inspiration/code from:	https://github.com/LoveMHz/XBEpy
 	-----------------------------------------------------------------------------------
 """
-import struct
-from limpp import *
+import struct, os
 
 
 class xbeinfo:
@@ -43,16 +42,6 @@ class xbeinfo:
 	def get_logo(self):
 		return 0
 
-	def image_png(self):
-		if hasattr(self, 'xbe_title_image'):
-			file_type = struct.unpack('4s', self.xbe_title_image.data[0:4])[0]
-
-			with open( 'Z:\\TitleImage.xbx', "wb") as title_image:
-				title_image.write(self.xbe_title_image.data)
-
-			if file_type == 'XPR0':
-				image = Get_image( file='Z:\\TitleImage.xbx' )
-				image.Write_PNG( 'Z:\\default.png' )
 	# print 'done'
 
 class XBE_HEADER:

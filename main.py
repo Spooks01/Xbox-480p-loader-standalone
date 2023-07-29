@@ -9,12 +9,8 @@ from struct import unpack
 from xbe import *
 from xbeinfo import *
 			
-			
-#####	Start markings for the log file.
 print "================================================================================"
-print "| Scripts\XBMC4Kids Extras\\480p Game Loaders\resources\\lib\manual.py loaded."
-print "| ------------------------------------------------------------------------------"
-
+print "================================================================================"
 
 def prepare_loaderxbe( self ):
 	
@@ -142,7 +138,6 @@ MenuColor2		= 0x4a4a56'
 		
 ################################################################################################################################
 
-
 Working_Directory	= os.getcwd() + "/"
 
 Game_Path	= os.getcwd() + "/Game/"
@@ -206,7 +201,7 @@ if Game_Path != "":
 			pass	
 		try:
 			shutil.copy2( Working_Directory + Loader, Game_Path + "loader_default.xbe" )
-			print( "Manual Installer","","Please wait..." )
+			print( "Please wait..." )
 			time.sleep( 0.5 )
 			if Loader == Loader1: print( 100,"Processing Game",Game_Title,"Loader Type = CDX" )
 			if Loader == Loader2: print( 100,"Processing Game",Game_Title,"Loader Type = Evox" )
