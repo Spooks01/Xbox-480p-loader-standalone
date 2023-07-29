@@ -1,8 +1,8 @@
-# Standalone 480p loader generator for Original Xbox 1.6
+# Standalone 480p loader generator for 1.6 Xbox
 
-##Requires python 2
+Requires python 2
 
-##Usage:
+Usage:
 
 1. Put game xbe in the Game folder
 2. Run main.py
