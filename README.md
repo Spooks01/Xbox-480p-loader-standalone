@@ -1,4 +1,4 @@
-# Standalone 480p loader generator for 1.6 Xbox
+# Standalone 480p loader script for 1.6 Xbox
 
 Requires python 2
 
